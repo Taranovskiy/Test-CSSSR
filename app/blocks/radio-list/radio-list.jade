@@ -1,0 +1,34 @@
+//-local mixin
+
+mixin radio (inputName, inputValue, labelValue, checked)
+	li.radio-list__item(class='radio-list__item_#{inputValue}')
+		case checked
+			when "+"
+				input.radio-list__input(
+					class='radio-list__input_#{inputValue}'
+					id='#{inputValue}'
+					name = '#{inputName}'
+					value='#{inputValue}'
+					type='radio'
+					checked
+				)
+			default
+				input.radio-list__input(
+					class='radio-list__input_#{inputValue}'
+					id='#{inputValue}'
+					name = '#{inputName}'
+					value='#{inputValue}'
+					type='radio'
+				)
+		label.radio-list__label(
+			class='radio-list__label_#{inputValue}'
+			for='#{inputValue}'
+			) #{labelValue}
+
+//-//////////////////////////////////////////////////
+
+mixin radio-list(list)
+	+b('ul').radio-list&attributes(attributes)
+		each item in list
+			+radio(item[0], item[1], item[2], item[3])
+		block

@@ -1,0 +1,20 @@
+mixin certificates()
+	+b('ul').certificates&attributes(attributes)
+		-var number = [1, 2]
+		each item in number
+			+e('li')(class='item_#{item}')
+				+e('a')(class='link_#{item}' href='assets/images/certificate_#{item}.pdf')
+					+e('img')(
+						class='image_#{item}'
+						src='assets/images/certificate_small_#{item}.jpg'
+						alt='certificate#{item}'
+						title='certificate#{item}'
+						width='200'
+						height='281'
+					)
+					+e('svg').svg(width='200' height='281' viewbox='0 0 200 281')
+						defs
+							filter(id='myFilter')
+								feColorMatrix(type="matrix" values="0.343 0.669 0.119 0 0 0.249 0.626 0.130 0 0 0.172 0.334 0.111 0 0 0 0 0 1 0")
+						image(filter='url(#myFilter)' xlink:href='assets/images/certificate_small_#{item}.jpg' width='100%' height='100%')
+		block

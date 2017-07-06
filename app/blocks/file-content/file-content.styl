@@ -1,0 +1,51 @@
+.file-content
+	display block
+	margin-x (112px)
+	&__title
+		margin-bottom 40px
+		font-family $courier
+		font-weight 400
+		font-size 90px
+		text-align center
+	&__biography
+		// outln red
+		clearfix()
+		margin-bottom 100px
+	&__photo-box
+		// outln green
+		float left
+		margin-right 30px
+		margin-bottom 20px
+	&__achievements-box
+		// outln green
+		float right
+		margin-top 20px
+		margin-left 30px
+	&__portfolio-box
+		// outln green
+		margin-top 20px
+		margin-bottom 30px
+	&__caption
+		text-align center
+		margin-y(30px)
+		font-family $courier
+	&__signature
+		padding-bottom 100px
+
+	+below($tablet)
+		margin-x (40px)
+	+below($mobile)
+		margin-x (20px)
+		&__title
+			font-size 60px
+		&__achievements-box
+			float none
+			display flex
+			flex-direction column
+			align-items center
+	+below($smallMobile)
+		&__photo-box
+			float none
+			display flex
+			justify-content center
+			margin-right 0

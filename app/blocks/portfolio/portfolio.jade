@@ -1,0 +1,20 @@
+mixin portfolio(obj)
+	+b('ul').portfolio&attributes(attributes)
+		each values, index in obj
+			+e('li')(class='item_#{index}' data-title='#{index}')
+				+e('a')(class='link_#{index}' href='https://taranovskiy.github.io/#{index}/')
+					each i in values
+						+e('img')(
+							class='image_#{i}'
+							src='assets/images/#{i}.jpg'
+							alt='#{i}'
+							title='#{i}'
+							height='400'
+
+						)
+						+e('svg').svg(width='200' height='400' viewbox='0 0 200 400')
+							defs
+								filter(id='myFilter')
+									feColorMatrix(type="matrix" values="0.343 0.669 0.119 0 0 0.249 0.626 0.130 0 0 0.172 0.334 0.111 0 0 0 0 0 1 0")
+							image(filter='url(#myFilter)' xlink:href='assets/images/#{i}.jpg' width='100%' height='100%')
+		block

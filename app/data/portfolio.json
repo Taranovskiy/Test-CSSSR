@@ -1,0 +1,11 @@
+{
+    "device": [
+        "device_catalog",
+        "device_index"
+    ],
+    "sedona": [
+        "sedona_form",
+        "sedona_photo",
+        "sedona_index"
+    ]
+}

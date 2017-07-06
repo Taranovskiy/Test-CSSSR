@@ -1,0 +1,15 @@
+mixin photo()
+	+b.photo&attributes(attributes)
+		+e('picture').picture
+			+e('source')(media='(min-width: 550px)' srcset='assets/images/photo_desktop.jpg 1x, assets/images/photo_desktop@2x.jpg 2x')
+			+e('img')(
+				src='assets/images/photo_mobile.jpg'
+				srcset='assets/images/photo_mobile@2x.jpg 2x'
+				alt='photo' title='photo'
+			)
+		+e('svg').svg(width='233' height='350' viewbox='0 0 233 350')
+			defs
+				filter(id='myFilter')
+					feColorMatrix(type="matrix" values="0.343 0.669 0.119 0 0 0.249 0.626 0.130 0 0 0.172 0.334 0.111 0 0 0 0 0 1 0")
+			image(filter='url(#myFilter)' xlink:href='assets/images/photo_desktop.jpg' width='100%' height='100%')
+		block

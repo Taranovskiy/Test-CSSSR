@@ -1,0 +1,16 @@
+//-local mixin
+mixin slider-level(levelTitle)
+	li.slider__item #{levelTitle}
+
+//-////////////////////////////////
+
+mixin slider(list)
+	+b.slider
+		+e.inner-field
+		+e('ul').list&attributes(attributes)
+			each item in list
+				+slider-level(item)
+		+e('span').cursor
+
+		block
+

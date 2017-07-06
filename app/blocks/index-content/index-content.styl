@@ -1,0 +1,49 @@
+.index-content
+	display block
+	margin-x (112px)
+	&__title
+		margin-bottom 54px
+	&__subtitle
+		font-size 24px
+		line-height 43px
+		&_hidden
+			visHidden()
+		&_gen-skills
+			transform translateX(-1px)
+		&_js-skills
+			transform translateX(2px)
+		&_about-me
+			transform translateX(2px)
+			margin-bottom 4px
+		&_in-future
+			margin-bottom -1px
+	&__section-desc
+		font-size 15px
+		font-weight 400
+		line-height 23px
+		color $font-light-grey
+		&_gen-skills
+			margin-bottom 27px
+		&_about-me
+			transform translateX(3px)
+			margin-bottom 23px
+		&_in-future
+			transform translateX(2px)
+			margin-bottom 16px
+	&__person-info
+		margin-bottom 58px
+	&__gen-skills
+		margin-bottom 36px
+	&__js-skills
+		margin-bottom 23px
+	&__about-me
+		margin-bottom 37px
+	&__in-future
+		margin-bottom 80px
+	&__date
+		padding-bottom 55px
+
+	+below($tablet)
+		margin-x (40px)
+	+below($mobile)
+		margin-x (20px)

@@ -1,0 +1,38 @@
+.page-header
+	// outln blue
+	display block
+	position relative
+	min-height 154px
+	padding-top 12px
+	margin-x (112px)
+	&__logo
+		margin-top 50px
+	&__title
+		visuallyhidden()
+	&::after
+		content ''
+		position absolute
+		top 48px
+		right -58px
+		size(252px, 106px)
+		backImage (stamp)
+	+below($tablet)
+		margin-x (40px)
+		&__logo
+			margin-top 10px
+		&::after
+			top 20px
+			right 0
+	+below($mobile)
+		margin-x (20px)
+		background-position 50% 100%
+		&__logo
+			text-align center
+			transform scale(.9)
+		&::after
+			transform scale(.6)
+			opacity .6
+			left 0
+			right 0
+			top 55px
+			margin-x (auto)

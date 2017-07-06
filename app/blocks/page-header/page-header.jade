@@ -1,0 +1,7 @@
+include ../logo/logo
+
+mixin page-header()
+	+b('header').page-header&attributes(attributes)
+		+e.logo
+			+logo
+		block
