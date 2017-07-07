@@ -1,6 +1,7 @@
-import gulp from 'gulp';
-import ghpages from 'gulp-gh-pages';
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 
-gulp.task('deploy', () => (
-	gulp.src(['dist/**/*', '!dist/robots.txt']).pipe(ghpages({ branch: 'dist' }))
-));
+gulp.task('deploy', function () {
+	return gulp.src('./dist/**/*')
+		.pipe(ghPages());
+});

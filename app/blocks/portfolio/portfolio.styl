@@ -31,7 +31,6 @@
 			opacity 0
 			color $font-brown
 			transition-duration 0.6s
-
 		&:hover
 			filter none
 			&:nth-of-type(2)
@@ -94,11 +93,18 @@
 		align-items center
 		&__item
 			margin-bottom 20px
+			&::before
+				opacity 1
+				left -25px
 			&:hover
 				filter none
+				left: -10px
+				&:nth-of-type(2)
+					&::before
+						left -25px
 				&::before
-					opacity 1
-					left -20px
+					left -25px
+
 				& img
 					&:nth-of-type(2)
 						transform none

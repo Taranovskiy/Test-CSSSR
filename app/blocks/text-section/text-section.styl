@@ -3,6 +3,7 @@
 	display block
 	margin-right 7px
 	margin-left 4px
+	text-indent 2em
 	font-family $courier
 	font-weight 400
 	font-size 30px
@@ -11,12 +12,13 @@
 	backImage(underline, png, repeat)
 	background-size 1000px 59px
 	background-position 0 -7px
-	& a
-		color #1f5f97
+	&_no-indent
+		text-indent 0
 	&_file
-		text-indent: 2em;
 		font-size 20px
 		line-height 30px
 		background-image none
+	& a
+		color #1f5f97
 
 
