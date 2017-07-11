@@ -1,3 +1,10 @@
+Тестовое задание для CSSSR.ru
+В проекте использован CSSSR Project Template.
+
+
+
+
+
 # CSSSR Project Template
 **Шаблон проекта для быстрого старта**
 
